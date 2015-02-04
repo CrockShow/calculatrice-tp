@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() // zone principale du programme
+{
+
+  
+   int nb1 = 0;   // déclaration des variables par type, toutes initialisées à 0 - destinées à accueillir les instructions de l'utilisateur
+   int nb2 = 0;
+double db1 = 0;
+double db2 = 0;
+   int operation = 0;
+   int type = 0;
+   char signe;
+   
+   printf("\t\t\tCalculatrice si6"); // affichage du nom du programme
+   printf("\n\n");
+   printf("\n\n");
+
+printf("1. Calculer des chiffres décimaux."); // affichage des choix possibles pour l'utilisateur
+printf("2. Calculer des chiffres entiers.");
+scanf("%d", &type); // lecture du choix de l'utilisateur et affection à la variable "type"
+printf("\n\n");
+printf("\n\n");
+if (type == 1) { // Première direction possible selon le choix de l'utilisateur ( choix 1)
+  printf("\n\n");
+   printf("\n\n");
+   printf("1. Addition \n"); // Affichage des nouveaux choix de l'utilisateur, de 1 à 4
+   printf("2. Soustraction \n");
+   printf("3. Multiplication \n");
+   printf("4. Division \n");
+   printf("\n\n");
+   printf("Quelle opération voulez-vous effectuer ?"); 
+    scanf("%d",&operation); // L'utilisateur écrit son choix et le programme le lit en l'affectant à la variable "operation"
+    printf("Premier nombre : ");
+       scanf("%d",&db1); // L'utilisateur choisit un chiffre, affecté à db1
+    printf("Autre nombre: ");
+       scanf("%d",&db2); // L'utilisateur choisit un chiffre, affecté à db2
+    printf("\n\n");
+    if (operation == 1) { // Choix 1 correspondant à l'addition
+       signe = '+';
+       printf("Votre résultat : %d ",db1 + db2); //Calcul et affichage du résultat
+    else if (operation == 2){
+       signe = '-';
+      printf("Votre résultat : %d ",db1 - db2);
+    }
+     else if (operation == 3){
+       signe = '*';
+       printf("Votre résultat :%d ",db1 * db2);
+    }
+    else if (operation == 4){
+       signe = '/';
+       printf("Votre résultat :%d ",db1 / db2);
+    }
+     else {  // Si l'entrée utilisateur n'est pas correcte, cela renvoie au message ci-dessous.
+       printf("Opération encore indisponible, veuillez tenter ultérieurement.");
+       return 24;
+    }
+}
+
+}
+
+// La procédure est exactement la même pour la deuxième  partie du programme.
+
+else if (type == 2) {
+
+  printf("\n\n");
+   printf("\n\n");
+   printf("1. Addition \n");
+   printf("2. Soustraction \n");
+   printf("3. Multiplication \n");
+   printf("4. Division \n");
+   printf("\n\n");
+   printf("Quelle opération voulez-vous effectuer ?");
+    scanf("%d",&operation);
+    printf("Premier nombre : ");
+       scanf("%d",&nb1);
+    printf("Autre nombre: ");
+       scanf("%d",&nb2);
+    printf("\n\n");
+    if (operation == 1) {
+       signe = '+';
+       printf("Votre résultat : %d ",nb1 + nb2);
+    }
+    else if (operation == 2){
+       signe = '-';
+      printf("Votre résultat : %d ",nb1 - nb2);
+    }
+     else if (operation == 3){
+       signe = '*';
+       printf("Votre résultat :%d ",nb1 * nb2);
+    }
+    else if (operation == 4){
+       signe = '/';
+       printf("Votre résultat :%d ",nb1 / nb2);
+    }
+     else {
+       printf("Opération indisponible, veuillez tenter ultérieurement.");
+       return 24;
+    }
+}
+
+}
+
+else {
+printf("Type de calcul encore indisponible.");
+return 24;
+}
